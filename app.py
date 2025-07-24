@@ -5,7 +5,7 @@ import os
 import streamlit as st
 
 # Connect to database
-connection = sqlite3.connect(r"C:\Users\Roshan\Desktop\Data_visualization\Covid_Dashboard_Streamlit\data\covid_19.db")
+connection = sqlite3.connect("covid_19.db")
 daily_report = pd.read_sql("""SELECT * FROM daily_report;""", con=connection)
 time_series = pd.read_sql("""SELECT * FROM time_series;""", con=connection)
 connection.close()
